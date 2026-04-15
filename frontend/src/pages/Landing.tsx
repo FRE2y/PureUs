@@ -1,7 +1,18 @@
 import { Link } from 'react-router-dom';
 import Button from '../components/ui/Button';
 import { useState } from 'react';
+import { useEffect } from 'react';
 export default function Landing() {
+  useEffect(() => {
+    fetch('http://localhost:8080/health')
+      .then((res) => res.text())
+      .then((data) => {
+        console.log('后端返回：', data);
+      })
+      .catch((err) => {
+        console.error('请求失败：', err);
+      });
+  }, []);
   const [open, setOpen] = useState(false);
   return (
     <div className="min-h-screen w-full bg-background">

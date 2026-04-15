@@ -1,0 +1,15 @@
+# spring:
+#   datasource:
+#     url: jdbc:mysql://localhost:3306/pureus?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+#     username: root
+#     password: 0000
+#     driver-class-name: com.mysql.cj.jdbc.Driver
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/PureUs?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+    username: pureus
+    password: 123456
+jpa:
+  hibernate:
+    ddl-auto: none
+  show-sql: true
